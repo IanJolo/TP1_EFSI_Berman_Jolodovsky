@@ -22,29 +22,32 @@ function validarIngreso(nota){
 function cambiarInput(nota){
     let esValido=validarIngreso(nota.value);
     if(esValido){
-        nota.style.border="3px solid green"
+        nota.style.border="5px solid green"
     }else {
-    nota.style.border="3px solid red"
+    nota.style.border="5px solid red"
     }
     if(nota.value==""){
         nota.style.border="1px solid black";
     }
 }
 function validarNotas(){
+    let listanotas=[notaMate, notaLengua, notaEfsi]
     let notasValidas=false;
     if(validarIngreso(notaMate.value)==true && validarIngreso(notaLengua.value)==true && validarIngreso(notaEfsi.value)==true ){
 notasValidas=true;
     }else {
-    notaMate.style.border="3px solid red";
-    notaEfsi.style.border="3px solid red";
-    notaLengua.style.border="3px solid red";
+        for(let i=0;i<3;i++){
+            if(!validarIngreso(listanotas[i].value)){
+                listanotas[i].style.border="5px solid red";
+            }
+        }
     muestraResult.style.color="red";
     muestraResult.innerHTML="Las notas ingresadas no son válidas";
     }
     return notasValidas;
 }
     function calcularPromedio(){
-    const cantMaterias=3;
+    const cantMaterias=4;
     if(validarNotas()==true){
     let suma = parseInt(notaEfsi.value) + parseInt(notaLengua.value) + parseInt(notaMate.value);
     let promedio=suma/ cantMaterias;
