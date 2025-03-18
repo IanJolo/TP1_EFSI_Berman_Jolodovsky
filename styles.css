@@ -25,6 +25,7 @@ input{
     height: 50%;
     display: flex;
     justify-content: center;
+    border-radius:5px;
 }
 h2{
     font-size: 3rem;
@@ -48,6 +49,8 @@ label{
     justify-content: space-between;
 }
 button{
+    width:10vw;
+    padding:1%;
     cursor:pointer;
     background-color:cornsilk;
     margin:3%;
@@ -58,6 +61,7 @@ button:hover{
     background-color:lemonchiffon;
 }
 .gif{
+    border-radius:10px;
 margin-top:2%;
     width:30vw;
     height: auto;
