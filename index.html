@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+        </style>
     <title>TP1EFSI</title>
 </head>
-<body>
-    <form>
-        <h2>Ingrese:</h2>
-        <label>Nota de matemática:</label><input type="number" id="notaMate">
-        <label>Nota de lengua:</label><input type="number" id="notaLengua">
-        <label>Nota de efsi:</label><input type="number" id="notaEfsi">
-        <div id="muestraResult"></div>
-        <button id="promedio" onclick="calcularPromedio()"></button>
-        <button id="notaMax"></button>
-    </form>
-    
-
+<body> 
+    <main>   
+    <h2>Ingrese:</h2>
+    <div class="todosInput">
+    <div class="divInput"><label>Nota de matemática:</label><input type="text" id="notaMate"></div>
+    <div class="divInput"><label>Nota de lengua:</label><input type="text" id="notaLengua"></div>
+    <div class="divInput"><label>Nota de efsi:</label><input type="text" id="notaEfsi"></div>
+</div>
+    <div id="muestraResult" class="resultados"></div>
+    <div class="botones">
+    <button id="promedio" onclick="calcularPromedio()">Promedio</button>
+    <button id="notaMax" onclick="calcularMateriaMax()">Materia Max</button>    
+    </div>  
+</main>
+<img src="gifs/1.gif" class="gif" id="gifJava">
 
     <script src="app.js"></script>
 </body>
